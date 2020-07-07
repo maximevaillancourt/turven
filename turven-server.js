@@ -3,6 +3,18 @@ var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 var url = require('url');
 
+app.enable('trust proxy');
+
+app.use (function (req, res, next) {
+  if (req.secure) {
+    // request was via https, so do no special handling
+    next();
+  } else {
+    // request was via http, so redirect to https
+    return res.redirect('https://' + req.headers.host + req.url);
+  }
+});
+
 app.get('/script', (req, res) => {
   res.sendFile(__dirname + '/turven-client.js');
 });
