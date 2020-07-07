@@ -6,7 +6,7 @@ turven lets people on your website see how many other people are also reading th
 Simply copy-paste the following <script> tag right before the ending </body> tag on your website:
 
 ```html
-<script src="https://turven.xyz/"></script>
+<script src="https://turven.xyz/script"></script>
 ```
 
 ### Is this production-ready?
