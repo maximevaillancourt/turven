@@ -43,11 +43,11 @@ document.body.append(messageDiv)
 socket.on('connectedClients', function (count) {
   var message;
   if (count <= 1) {
-    message = "You're the only person in the whole world on this web page right now. Why not invite a friend? :)"
+    message = "You're the only person in the whole world on this web page right now. Why not invite a friend?"
   } else if (count == 2) {
-    message = 'Right now, somewhere on this planet, there is another person reading this page—kinda like your Internet twin. :)';
+    message = 'Right now, somewhere on this planet, there is another person reading this page—kinda like your Internet twin.';
   } else {
-    message = "Somewhere on this planet, " + (count - 1) + " other people are currently reading this page. You're in great company. :)";
+    message = "Around the world, " + (count - 1) + " other people are currently reading this page, just like you. You're in great company.";
   }
   messageDiv.innerHTML = message;
   messageDiv.style.opacity = 1;
