@@ -47,7 +47,7 @@ socket.on('connectedClients', function (count) {
   } else if (count == 2) {
     message = 'Right now, somewhere on this planet, there is another person reading this page—kinda like your Internet twin. :)';
   } else {
-    message = "Somewhere on this planet," + (count - 1) + " other people are currently reading this page. You're in great company. :)";
+    message = "Somewhere on this planet, " + (count - 1) + " other people are currently reading this page. You're in great company. :)";
   }
   messageDiv.innerHTML = message;
   messageDiv.style.opacity = 1;
