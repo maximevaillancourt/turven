@@ -1,0 +1,12 @@
+{
+  "name": "turven-server",
+  "version": "0.0.1",
+  "description": "turven lets people on your website see how many other people are also reading the same page",
+  "scripts": {
+    "start": "node turven-server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.3.0"
+  }
+}
