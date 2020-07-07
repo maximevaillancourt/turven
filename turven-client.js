@@ -17,7 +17,7 @@ var h,f,l,d=String.fromCharCode;t.exports={version:"2.1.2",encode:a,decode:p}},f
 ** Released under the MIT License.
 **/
 
-var socket = io.connect('http://localhost:3000');
+var socket = io.connect('https://turven.herokuapp.com/');
 var messageDiv = document.createElement("div");
 
 const randomId = Math.random().toString(36).substring(7);
