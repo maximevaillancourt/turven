@@ -14,19 +14,18 @@ io.on('connection', (socket) => {
   url = url.parse(socket.request.headers.referer)
 
   const hostAndPathname = url.host + url.pathname;
+  socket.join(hostAndPathname);
 
   if (connectedClients[hostAndPathname] == null) {
     connectedClients[hostAndPathname] = 0;
   }
 
   connectedClients[hostAndPathname] += 1;
-  io.emit('connectedClients', connectedClients[hostAndPathname]);
-  console.log(connectedClients);
+  io.to(hostAndPathname).emit('connectedClients', connectedClients[hostAndPathname]);
 
   socket.on('disconnect', () => {
     connectedClients[hostAndPathname] -= 1;
-    console.log(connectedClients);
-    io.emit('connectedClients', connectedClients[hostAndPathname]);
+    io.to(hostAndPathname).emit('connectedClients', connectedClients[hostAndPathname]);
   });
 });
 

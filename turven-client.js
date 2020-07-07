@@ -24,19 +24,29 @@ const randomId = Math.random().toString(36).substring(7);
 var turvenDivId = "turven-" + randomId;
 messageDiv.setAttribute("id", turvenDivId);
 
-messageDiv.style.cssText = "opacity: 0; display: block; transition: opacity 150ms; line-height: 1.3; position: fixed; bottom: 10px; left: 10px; font-size: 0.8em; padding: 0.2em 0.4em; border-radius: 4px; background: #333; color: white;";
+messageDiv.style.cssText = "opacity: 0; display: block; transition: opacity 150ms; position: fixed; bottom: 10px; right: 10px; font-size: 0.75em; padding: 0.15em 0.5em; border-radius: 4px; background: white; color: black; box-shadow: 0 2px 8px #3333;";
+
+var previousMessage = ''
+messageDiv.addEventListener("mouseenter", function() {
+  previousMessage = messageDiv.innerHTML
+  messageDiv.innerHTML = 'This widget is powered by <a target="_blank" style="color: black;" href="https://github.com/maximevaillancourt/turven">turven</a>. Add it to your website for free! <span style="cursor: pointer; background: #500000; border-radius: 4px; font-size: 0.9em; padding: 0.1em 0.3em; color:#f28b8b;" onclick="javascript:this.parentNode.style.display = \'none\';">Hide&nbsp;this&nbsp;❌</span>';
+}, false);
+
+messageDiv.addEventListener("mouseleave", function() {
+  messageDiv.innerHTML = previousMessage;
+}, false);
 
 document.body.append(messageDiv)
 
 socket.on('connectedClients', function (count) {
   var message;
   if (count <= 1) {
-    message = "It looks like you're alone on this page right now. Share it with a friend!"
+    message = "You're the only person across the world on this page right now. Share it with a friend!"
   } else if (count == 2) {
-    message = 'There is another person reading this page right now. Internet twins.';
+    message = 'There is another person reading this page right now, just like you. Kinda like Internet twins.';
   } else {
-    message = 'There are ' + (count - 1) + ' other people reading this page right now.';
+    message = 'There are ' + (count - 1) + ' other people around the world reading this page right now. How amazing is that.';
   }
-  document.getElementById(turvenDivId).innerHTML = message + '<br><span style="font-size: 0.7em;">Powered by <a target="_blank" style="color: white;" href="https://github.com/maximevaillancourt/turven">turven</a></span>';
-  document.getElementById(turvenDivId).style.opacity = 0.9;
+  messageDiv.innerHTML = message;
+  messageDiv.style.opacity = 1;
 });
