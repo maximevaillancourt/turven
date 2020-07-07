@@ -28,7 +28,7 @@ messageDiv.style.cssText = "opacity: 0; display: block; transition: opacity 150m
 
 document.body.append(messageDiv)
 
-socket.on('connectedClients', function(count){
+socket.on('connectedClients', function (count) {
   var message;
   if (count <= 1) {
     message = "It looks like you're alone on this page right now. Share it with a friend!"
