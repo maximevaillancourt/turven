@@ -25,6 +25,9 @@ io.on('connection', (socket) => {
 
   socket.on('disconnect', () => {
     connectedClients[hostAndPathname] -= 1;
+    if (connectedClients[hostAndPathname] == 0) {
+      delete connectedClients[hostAndPathname];
+    }
     io.to(hostAndPathname).emit('connectedClients', connectedClients[hostAndPathname]);
   });
 });
