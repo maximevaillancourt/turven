@@ -3,8 +3,12 @@ var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 var url = require('url');
 
-app.get('/', (req, res) => {
+app.get('/script', (req, res) => {
   res.sendFile(__dirname + '/turven-client.js');
+});
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
 });
 
 var connectedClients = {}
