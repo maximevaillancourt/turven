@@ -1,5 +1,5 @@
 if (!document.body) {
-  throw new Error("Looks like you included the Livia script in the wrong place. Make sure to insert the Livia <script> tag right before the ending </body> tag of your page.")
+  throw new Error("Looks like you included the turven script in the wrong place. Make sure to insert the turven <script> tag right before the ending </body> tag of your page.")
 }
 
 /*!
