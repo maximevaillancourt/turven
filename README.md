@@ -3,7 +3,7 @@ turven lets people on your website see how many other people are also reading th
 
 ### How do I add this to my website?
 
-Simply copy-paste the following <script> tag right before the ending </body> tag on your website:
+Simply copy-paste the following `<script>` tag right before the ending `</body>` tag on your website:
 
 ```html
 <script src="https://turven.xyz/script"></script>
