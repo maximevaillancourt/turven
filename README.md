@@ -9,10 +9,16 @@ Simply copy-paste the following `<script>` tag right before the ending `</body>`
 <script src="https://turven.xyz/script"></script>
 ```
 
+### Websites using turven
+- [turven.xyz](https://turven.xyz)
+- [maximevaillancourt.com](https://maximevaillancourt.com)
+
+Using turven on your own website? Open a PR and add it to the list! :) 
+
 ### Is this production-ready?
 
 Not really. Enjoy at your own risk.
 
 ### Why "turven"?
 
-"turven" is Dutch for "tally".
+"turven" is Dutch for "tally". It sounds pretty cool, it's short enough that we can remember it, plus the domain name was available. Bingo!
