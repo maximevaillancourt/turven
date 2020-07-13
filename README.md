@@ -13,6 +13,7 @@ Simply copy-paste the following `<script>` tag right before the ending `</body>`
 - [turven.xyz](https://turven.xyz)
 - [maximevaillancourt.com](https://maximevaillancourt.com)
 - [covid19-thane.github.io](http://covid19-thane.github.io)
+- [garimasingh.me](http://garimasingh.me)
 
 Using turven on your own website? Open a PR and add it to the list! :) 
 
