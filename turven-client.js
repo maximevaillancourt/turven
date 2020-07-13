@@ -31,7 +31,7 @@ messageDiv.style.cssText = "opacity: 0; display: block; transition: opacity 150m
 var previousMessage = ''
 messageDiv.addEventListener("mouseenter", function() {
   previousMessage = messageDiv.innerHTML
-  messageDiv.innerHTML = 'This widget is powered by <a target="_blank" style="color: black;" href="https://github.com/maximevaillancourt/turven">turven</a>. Add it to your website for free! <span style="cursor: pointer; background: #500000; border-radius: 4px; font-size: 0.9em; padding: 0.1em 0.3em; color:#f28b8b;" onclick="javascript:this.parentNode.style.display = \'none\';">Hide&nbsp;this&nbsp;❌</span>';
+  messageDiv.innerHTML = 'This widget is powered by <a target="_blank" style="color: black;" href="https://github.com/maximevaillancourt/turven">turven</a>. <span style="cursor: pointer; background: #500000; border-radius: 4px; font-size: 0.9em; padding: 0.1em 0.3em; color:#f28b8b;" onclick="javascript:this.parentNode.style.display = \'none\';">Hide&nbsp;this&nbsp;❌</span>';
 }, false);
 
 messageDiv.addEventListener("mouseleave", function() {
