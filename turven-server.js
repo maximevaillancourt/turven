@@ -36,6 +36,9 @@ var connectedClients = {}
 
 io.on('connection', (socket) => {
   // TODO: handle localhost (and more generally, non-public hosts)
+  if (socket.request.headers.referer == null) {
+    return
+  }
   url = url.parse(socket.request.headers.referer)
 
   const hostAndPathname = url.host + url.pathname;
